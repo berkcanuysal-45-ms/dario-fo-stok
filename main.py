@@ -3,7 +3,7 @@ import streamlit as st
 import db
 
 st.set_page_config(page_title="Dario Fo Roastery", layout="wide")
-st.title("☕ Dario Fo & Finora - Akıllı Stok")
+st.title("☕ Dario Fo - Akıllı Stok")
 
 # --- VERİTABANINDAN LİSTELERİ ÇEK ---
 # Program her açıldığında mevcut isimleri öğrensin
@@ -144,4 +144,5 @@ if not df.empty:
     with tab3:
         st.dataframe(df.sort_index(ascending=False), use_container_width=True)
 else:
+
     st.info("Veri bekleniyor... Sol menüden ilk kaydınızı oluşturun.")
